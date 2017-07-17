@@ -1,0 +1,6 @@
+framework module Pods_PresentationControlTests {
+  umbrella header "Pods-PresentationControlTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
