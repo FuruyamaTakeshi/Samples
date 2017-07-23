@@ -10,45 +10,34 @@ import UIKit
 
 final class PickerCollectionViewCell: UICollectionViewCell {
     var label: UILabel!
-    var imageView: UIImageView!
+
     var font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
     var highlightedFont = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-    var _selected: Bool = false {
-        didSet(selected) {
+    
+    var selectedWithAnimation: Bool = false {
+        didSet {
             let animation = CATransition()
             animation.type = kCATransitionFade
             animation.duration = 0.15
-            self.label.layer.add(animation, forKey: "")
             self.label.font = self.isSelected ? self.highlightedFont : self.font
         }
     }
     
-    func initialize() {
+    private func initialize() {
         self.layer.isDoubleSided = false
         self.layer.shouldRasterize = true
         self.layer.rasterizationScale = UIScreen.main.scale
         
         self.label = UILabel(frame: self.contentView.bounds)
-        self.label.backgroundColor = UIColor.clear
+        self.label.backgroundColor = .clear
         self.label.textAlignment = .center
-        self.label.textColor = UIColor.gray
+        self.label.textColor = .gray
         self.label.numberOfLines = 1
         self.label.lineBreakMode = .byTruncatingTail
-        self.label.highlightedTextColor = UIColor.black
+        self.label.highlightedTextColor = .black
         self.label.font = self.font
         self.label.autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin, .flexibleBottomMargin, .flexibleRightMargin]
         self.contentView.addSubview(self.label)
-        
-        self.imageView = UIImageView(frame: self.contentView.bounds)
-        self.imageView.backgroundColor = UIColor.clear
-        self.imageView.contentMode = .center
-        self.imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.contentView.addSubview(self.imageView)
-    }
-    
-    init() {
-        super.init(frame: CGRect.zero)
-        self.initialize()
     }
     
     override init(frame: CGRect) {
@@ -58,7 +47,6 @@ final class PickerCollectionViewCell: UICollectionViewCell {
     
     required init!(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.initialize()
     }
     
     func configure(pickerView: ScalePickerView, at indexPath: IndexPath) {

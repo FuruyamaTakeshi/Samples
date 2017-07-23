@@ -20,46 +20,11 @@ protocol ScalePickerViewDelegate: UIScrollViewDelegate {
     func pickerView(_ pickerView: ScalePickerView, configureLabel label: UILabel, forItem item: Int)
 }
 
-// MARK: ScalePickerViewDelegateIntercepter
-class ScalePickerViewDelegateIntercepter: NSObject, UICollectionViewDelegate, UIScrollViewDelegate {
-    weak var pickerView: ScalePickerView?
-    weak var delegate: UIScrollViewDelegate?
-    
-    init(pickerView: ScalePickerView, delegate: UIScrollViewDelegate?) {
-        self.pickerView = pickerView
-        self.delegate = delegate
-    }
-    
-    override func forwardingTarget(for aSelector: Selector) -> Any? {
-        if self.pickerView!.responds(to: aSelector) {
-            return self.pickerView
-        } else if let delegate = self.delegate, delegate.responds(to: aSelector) {
-            return delegate
-        } else {
-            return nil
-        }
-    }
-    
-    override func responds(to aSelector: Selector) -> Bool {
-        if self.pickerView!.responds(to: aSelector) {
-            return true
-        } else if let delegate = self.delegate, delegate.responds(to: aSelector) {
-            return true
-        } else {
-            return super.responds(to: aSelector)
-        }
-    }
-    
-}
-
 class ScalePickerView: UIView {
     
     var dataSource: ScalePickerViewDataSource?
-    weak var delegate: ScalePickerViewDelegate? {
-        didSet {
-            self.intercepter.delegate = delegate
-        }
-    }
+    weak var delegate: ScalePickerViewDelegate?
+    
     lazy var font = UIFont.systemFont(ofSize: 20)
     lazy var highlightedFont = UIFont.boldSystemFont(ofSize: 20)
     
@@ -76,7 +41,6 @@ class ScalePickerView: UIView {
     
     // MARK: Private Properties
     fileprivate var collectionView: UICollectionView!
-    fileprivate var intercepter: ScalePickerViewDelegateIntercepter!
     fileprivate var collectionViewLayout: PickerViewFlowLayout {
         let layout = PickerViewFlowLayout()
         return layout
@@ -95,19 +59,7 @@ class ScalePickerView: UIView {
             PickerCollectionViewCell.self,
             forCellWithReuseIdentifier: NSStringFromClass(PickerCollectionViewCell.self))
         self.addSubview(self.collectionView)
-        
-        self.intercepter = ScalePickerViewDelegateIntercepter(pickerView: self, delegate: self.delegate)
-        self.collectionView.delegate = self.intercepter
-    }
-    
-    init() {
-        super.init(frame: CGRect.zero)
-        self.initialize()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.initialize()
+        self.collectionView.delegate = self
     }
     
     required init!(coder aDecoder: NSCoder) {
@@ -146,6 +98,7 @@ class ScalePickerView: UIView {
     
     func selectItem(_ item: Int, animated: Bool = false) {
         selectItem(item, animated: animated, notifySelection: true)
+        
     }
     
     private func selectItem(_ item: Int, animated: Bool, notifySelection: Bool) {
@@ -178,7 +131,7 @@ extension ScalePickerView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(PickerCollectionViewCell.self), for: indexPath) as! PickerCollectionViewCell
-        cell._selected = (indexPath.item == self.selectedItem)
+        cell.selectedWithAnimation = (indexPath.item == self.selectedItem)
         cell.configure(pickerView: self, at: indexPath)
         
         guard let delegate = self.delegate else { return cell }
@@ -208,13 +161,11 @@ extension ScalePickerView: UICollectionViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("## \(#function) start")
         delegate?.scrollViewDidScroll?(scrollView)
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
         collectionView.layer.mask?.frame = collectionView.bounds
         CATransaction.commit()
-        print("## \(#function) end")
     }
     
 }
