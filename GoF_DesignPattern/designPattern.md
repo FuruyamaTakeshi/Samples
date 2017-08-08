@@ -1,12 +1,11 @@
 # デザインパターン
 
-# 本日共有する概要
+# 概要
 見てきたor 使ってきたデザインパターン
 iOSアプリ開発での使用例(GoF切り口)
 
 ## 1. 生成に関するパターン
 ### Builder　
-
 ![Builder](img/640px-Builder_UML_class_diagram.svg.png)
 
 オフライン会計データ送信に於けるmodelオブジェクトからJSONオブジェクト生成
@@ -20,12 +19,20 @@ iOSアプリ開発での使用例(GoF切り口)
 
 ## 2. 構造に関するパターン
 ### Adapter　
-WrapperにしてI/Fを既存のものに合わせる。　本来は、依存関係をカプセル化 GoogleAnalytics, FabricなどのT
+WrapperにしてI/Fを既存のものに合わせる(依存関係をカプセル化)で使用 GoogleAnalytics, FabricなどのTracking
+
+
 ### Decorator
-画像生成(レシート[カスタマ、オーダー]、ジャーナル)
+![Decorator](img/606px-Decorator_UML_class_diagram.svg.png)
+
+画像生成(レシート[カスタマ、オーダー]、ジャーナル)で使用
 会計情報に対して、税金情報、割引情報、店舗情報、チップ、クレジットカード情報(カードNo. 会社、サイン)
 返金
 (ジャーナル)
+
+```swift
+
+```
 ### Composite
 ディレクトリ構造
 
@@ -35,9 +42,13 @@ Printer Driver
 ## 3. 振る舞いに関するパターン
 
 ### [Strategy](https://ja.wikipedia.org/wiki/Strategy_パターン#/media/File:StrategyPatternClassDiagram.svg)
-レジアプリ　税計算、割引按分計算
-相続税計算アプリ　土地路線価計算
+レジアプリ　税計算、割引按分計算（％割引、＄割引）
+相続税計算アプリ　土地評価額計算（路線価方式、倍率方式）　
+![Strategy](img/640px-StrategyPatternClassDiagram.svg.png)
 
+```swift
+
+```
 ### Command
 履歴の積み上げと再実行、Printerへの印刷コマンドの抽象化、
 
