@@ -42,7 +42,7 @@ Analytics.createTracker(key: "myTracker")
 返金
 
 
-![レシート図](img/レシート図1.png)
+![レシート図](img/receipt.png)
 
 
 ![Decorator](img/606px-Decorator_UML_class_diagram.svg.png)
