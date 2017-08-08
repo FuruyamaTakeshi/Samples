@@ -8,7 +8,7 @@ class PrintImage {
     }
 }
 
-class BodyImage: PrintImage {
+class VoucherImage: PrintImage {
     override func renderImage() {
         for idx in 0..<10 {
             print("item: \(idx)")

@@ -11,28 +11,77 @@ iOSアプリ開発での使用例(GoF切り口)
 オフライン会計データ送信に於けるmodelオブジェクトからJSONオブジェクト生成
 
 ![オフライン会計データ送信](img/offlineCheckDto.png)
-```swift
 
-```
 ### Singleton
-ファイル管理クラス UserDefault
+ファイル管理クラス[FileManager](https://developer.apple.com/documentation/foundation/filemanager)
+ [UserDefaults](https://developer.apple.com/documentation/tvmljs/userdefaults)
 
 ## 2. 構造に関するパターン
-### Adapter　
-WrapperにしてI/Fを既存のものに合わせる(依存関係をカプセル化)で使用 GoogleAnalytics, FabricなどのTracking
+### Adapter
+WrapperにしてI/Fを既存のものに合わせる(依存関係をカプセル化)で使用 GoogleAnalytics, FabricなどのTracking詳細をカプセル化
 
+![Adapter](img/640px-Adapter_using_delegation_UML_class_diagram.svg.png)
+```swift
+struct GoogleAnalytcis {
+    static let shared = GoogleAnalytcis()
+    func trackerWithTrackingId(_ key: String) {}
+}
+
+struct Analytics {
+    static func createTracker(key: String) {
+        GoogleAnalytcis.shared.trackerWithTrackingId(key)
+    }
+}
+
+Analytics.createTracker(key: "myTracker")
+```
 
 ### Decorator
-![Decorator](img/606px-Decorator_UML_class_diagram.svg.png)
-
 画像生成(レシート[カスタマ、オーダー]、ジャーナル)で使用
 会計情報に対して、税金情報、割引情報、店舗情報、チップ、クレジットカード情報(カードNo. 会社、サイン)
 返金
-(ジャーナル)
+
+
+![レシート図](img/レシート図1.png)
+
+
+![Decorator](img/606px-Decorator_UML_class_diagram.svg.png)
 
 ```swift
+class PrintImage {
+    func renderImage() {
+        print("image")
+    }
+}
+class VoucherImage: PrintImage {
+    override func renderImage() {
+        for idx in 0..<10 {
+            print("item: \(idx)")
+        }
+    }
+}
 
+class DecolateImage: PrintImage {
+    let image: PrintImage
+    init(image: PrintImage) {
+        self.image = image
+    }
+
+    override func renderImage() {
+        print("###########")
+        image.renderImage()
+        print("###########")
+
+    }
+}
+
+PaymentImage(image:
+    StoreInfoImage(image:
+        DecolateImage(image:
+            BodyImage()))).renderImage()
 ```
+ジャーナル:　http://chigai.lance3.net/z0319.html
+
 ### Composite
 ディレクトリ構造
 
@@ -49,55 +98,15 @@ Printer Driver
 ```swift
 
 ```
-### Command
-履歴の積み上げと再実行、Printerへの印刷コマンドの抽象化、
 
-### Facade
-
-### State
-networkオーディオfirmwareとのI/F
-HTTP + XML
-
-
-### その他
-NSOpereation
-
-流動的要素は、クラスにして集約で持たせる
-
-
-継承だと、継承の爆発が発生する。
-
-例
-
-
-```swift
-final FileManager {
-  let shared = FileManager()
-
-  private init() {}
-
-  func create() {
-    //
-  }
-
-  func delete() {
-    //
-  }
-}
-
-```
-
-#
+# 参考
 http://monopocket.jp/todo/objective-c-design-pattern/
+## 書籍
+1. [増補改訂版Java言語で学ぶデザインパターン入門](https://www.amazon.co.jp/%E5%A2%97%E8%A3%9C%E6%94%B9%E8%A8%82%E7%89%88Java%E8%A8%80%E8%AA%9E%E3%81%A7%E5%AD%A6%E3%81%B6%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E5%85%A5%E9%96%80-%E7%B5%90%E5%9F%8E-%E6%B5%A9/dp/4797327030)
+2. [オブジェクト指向のこころ](https://www.amazon.co.jp/オブジェクト指向のこころ-SOFTWARE-PATTERNS-アラン-シャロウェイ/dp/4621066048/ref=sr_1_1?s=books&ie=UTF8&qid=1502236388&sr=1-1&keywords=オブジェクト指向のこころ)
+
+# その他
 ## iOS
 1. MVC
 2. delegate
 3. Target - Action
-
-## 書籍
-1. オブジェクト指向のこころ
-2. デザインパターン
-
-## 設計
-
-＃ パラダイム

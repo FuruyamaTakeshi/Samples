@@ -171,12 +171,11 @@ voucher0.items.append(Item(price: 10.00, name: "Ice latte"))
 voucher0.discExs.append(DiscEx(value: 2.5, name: "$2.5disc", type: .price))
 voucher0.discExs.append(DiscEx(value: 3.0, name: "3%disc", type: .percent))
 
-let dicexCalc0 = AnyDiscExCalc(PriceDiscExCalc())
-let dicexCalc1 = AnyDiscExCalc(PercentDiscExCalc())
+let discCalc0 = AnyDiscExCalc(PriceDiscExCalc())
 
-[dicexCalc0, dicexCalc1].map { $0.execute(check: voucher0) }
+[discCalc0].map { $0.execute(check: voucher0) }
 
-let array = [dicexCalc0]
+let array = [discCalc0]
 
 let results = array.map {
     return $0.execute(check: voucher0)
@@ -184,11 +183,11 @@ let results = array.map {
 
 print("total: \(voucher0.total)")
 print("-------割引$----------")
-dicexCalc0.execute(check: voucher0).orderDiscExs.forEach {
+discCalc0.execute(check: voucher0).orderDiscExs.forEach {
     print("name: \($0.itemName), value: \($0.value)")
 }
 print("-------割引%----------")
-dicexCalc1.execute(check: voucher0).orderDiscExs.forEach {
+discCalc0.execute(check: voucher0).orderDiscExs.forEach {
     print("name: \($0.itemName), value: \($0.value)")
 }
 
@@ -201,8 +200,7 @@ results.forEach { result in
     print("############################")
 }
 
-let value0 = dicexCalc0.execute(check: voucher0)
-let value1 = dicexCalc1.execute(check: voucher0)
+let value0 = discCalc0.execute(check: voucher0)
 //voucher0.orderDiscExs.forEach {
     //print(("\($0.value)"))
 //}
