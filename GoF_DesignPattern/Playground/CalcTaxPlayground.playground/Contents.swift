@@ -21,8 +21,20 @@ class CalcJPTax: CalcTax {
     }
 }
 
-let calcUsTax = CalcUSTax()
-let calcJpTax = CalcJPTax()
+enum Country {
+    case us, jp
+    func calcTax() -> CalcTax {
+        switch self {
+        case .us:
+            return CalcUSTax()
+        case .jp:
+            return CalcJPTax()
+        }
+    }
+}
+
+let calcUsTax = Country.us.calcTax()
+let calcJpTax = Country.jp.calcTax()
 
 [calcUsTax, calcJpTax]
     .flatMap { $0 }
