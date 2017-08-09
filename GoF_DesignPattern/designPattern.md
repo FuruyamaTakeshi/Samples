@@ -128,7 +128,6 @@ let calcUsTax = Country.us.calcTax()
 let calcJpTax = Country.jp.calcTax()
 
 [calcUsTax, calcJpTax]
-    .flatMap { $0 }
     .map { $0.taxAmount(subtotal: 100) }
 ```
 
