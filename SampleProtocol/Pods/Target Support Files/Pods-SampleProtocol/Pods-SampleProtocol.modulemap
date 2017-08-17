@@ -1,0 +1,6 @@
+framework module Pods_SampleProtocol {
+  umbrella header "Pods-SampleProtocol-umbrella.h"
+
+  export *
+  module * { export * }
+}

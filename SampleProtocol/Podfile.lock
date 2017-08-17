@@ -1,0 +1,15 @@
+PODS:
+  - SwiftDate (4.1.7)
+  - SwiftGen (4.2.1)
+
+DEPENDENCIES:
+  - SwiftDate
+  - SwiftGen
+
+SPEC CHECKSUMS:
+  SwiftDate: 029be76691ee89176da3a46c7df3415b6734bc5b
+  SwiftGen: 2ba2a88fc6130b96e38e2baa0029e4bd222ffd85
+
+PODFILE CHECKSUM: e89346e95dd653fa48279322c21fb4bf85f46573
+
+COCOAPODS: 1.3.0

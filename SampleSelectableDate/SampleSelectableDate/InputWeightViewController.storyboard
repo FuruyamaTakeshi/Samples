@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="heL-qs-Ip3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input Weight View Controller-->
+        <scene sceneID="TJf-5H-kAz">
+            <objects>
+                <viewController storyboardIdentifier="InputWeightViewController" id="heL-qs-Ip3" customClass="InputWeightViewController" customModule="SampleSelectableDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="65k-TX-V4X"/>
+                        <viewControllerLayoutGuide type="bottom" id="IeQ-io-Srk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oyo-18-ZOD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGl-rI-kqt">
+                                <rect key="frame" x="161" y="63" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Var-7H-pyx">
+                                <rect key="frame" x="170" y="113" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gGl-rI-kqt" firstAttribute="centerX" secondItem="Oyo-18-ZOD" secondAttribute="centerX" id="NI3-k6-y7u"/>
+                            <constraint firstItem="Var-7H-pyx" firstAttribute="top" secondItem="gGl-rI-kqt" secondAttribute="bottom" constant="29" id="oxP-yE-dCF"/>
+                            <constraint firstItem="Var-7H-pyx" firstAttribute="centerX" secondItem="Oyo-18-ZOD" secondAttribute="centerX" id="uPf-wU-OZH"/>
+                            <constraint firstItem="gGl-rI-kqt" firstAttribute="top" secondItem="65k-TX-V4X" secondAttribute="bottom" constant="43" id="wGc-rp-jl1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Var-7H-pyx" id="m8I-ix-8ec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L61-xb-h8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="125"/>
+        </scene>
+    </scenes>
+</document>

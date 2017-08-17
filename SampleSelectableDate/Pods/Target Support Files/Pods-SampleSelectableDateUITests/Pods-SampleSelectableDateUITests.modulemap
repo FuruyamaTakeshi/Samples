@@ -1,0 +1,6 @@
+framework module Pods_SampleSelectableDateUITests {
+  umbrella header "Pods-SampleSelectableDateUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

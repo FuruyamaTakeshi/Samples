@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="EOY-0z-ayA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input Blood Pressure View Controller-->
+        <scene sceneID="LhB-nW-c3b">
+            <objects>
+                <viewController storyboardIdentifier="InputBloodPressureViewController" id="EOY-0z-ayA" customClass="InputBloodPressureViewController" customModule="SampleSelectableDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oJu-tR-bBO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zcd-uF-Cgn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wwc-4z-Vqs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bloodPressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYi-eR-RSG">
+                                <rect key="frame" x="132" y="79" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCn-Hi-jZk">
+                                <rect key="frame" x="164" y="126" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VCn-Hi-jZk" firstAttribute="top" secondItem="bYi-eR-RSG" secondAttribute="bottom" constant="26" id="Krn-xp-aDO"/>
+                            <constraint firstItem="bYi-eR-RSG" firstAttribute="top" secondItem="oJu-tR-bBO" secondAttribute="bottom" constant="59" id="amX-MY-0Mk"/>
+                            <constraint firstItem="VCn-Hi-jZk" firstAttribute="centerX" secondItem="Wwc-4z-Vqs" secondAttribute="centerX" id="ur6-Eg-Mct"/>
+                            <constraint firstItem="bYi-eR-RSG" firstAttribute="centerX" secondItem="Wwc-4z-Vqs" secondAttribute="centerX" id="v2K-SS-DVl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="VCn-Hi-jZk" id="PH3-I4-HXq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wOk-iE-rh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="148"/>
+        </scene>
+    </scenes>
+</document>

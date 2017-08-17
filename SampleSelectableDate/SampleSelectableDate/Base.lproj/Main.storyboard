@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SampleSelectableDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe9-LE-R0W">
+                                <rect key="frame" x="164" y="46" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ame-eN-Bcx">
+                                <rect key="frame" x="166" y="106" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hnj-xq-hBw">
+                                <rect key="frame" x="163" y="162" width="51" height="31"/>
+                            </switch>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-2A-EGO">
+                                <rect key="frame" x="27.5" y="225" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GNb-2A-EGO" firstAttribute="top" secondItem="Hnj-xq-hBw" secondAttribute="bottom" constant="32" id="0wj-fe-0pX"/>
+                            <constraint firstItem="GNb-2A-EGO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1a4-gA-a3j"/>
+                            <constraint firstItem="Ame-eN-Bcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7we-KQ-Cfw"/>
+                            <constraint firstItem="Pe9-LE-R0W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Oi-YC-ckv"/>
+                            <constraint firstItem="Ame-eN-Bcx" firstAttribute="top" secondItem="Pe9-LE-R0W" secondAttribute="bottom" constant="30" id="T7c-nG-pyV"/>
+                            <constraint firstItem="Hnj-xq-hBw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a2g-xy-kON"/>
+                            <constraint firstItem="Pe9-LE-R0W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="eU8-Qg-djO"/>
+                            <constraint firstItem="Hnj-xq-hBw" firstAttribute="top" secondItem="Ame-eN-Bcx" secondAttribute="bottom" constant="35" id="mYh-IR-kYe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="Ame-eN-Bcx" id="zbK-1p-C3Z"/>
+                        <outlet property="inputManuallyButton" destination="Pe9-LE-R0W" id="POq-si-Ggf"/>
+                        <outlet property="selectPickerView" destination="GNb-2A-EGO" id="pI5-fk-3GF"/>
+                        <outlet property="valueTypeSwitch" destination="Hnj-xq-hBw" id="82w-NM-ywZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
