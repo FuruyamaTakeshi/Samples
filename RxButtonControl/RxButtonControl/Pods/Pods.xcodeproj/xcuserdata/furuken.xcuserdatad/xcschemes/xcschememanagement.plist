@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-RxButtonControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-RxButtonControlTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-RxButtonControlUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1FAAAD3990C9C51DD5CA574910F14076</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>205B9755C20DFB509E68A9F51FDE0476</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64682E0027AD576853054CED8CBD696E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>742FC55519D22A6E01CF0F77EDE64FF9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A124A3BF15A542F9A4D7C6BDB8F3D97C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

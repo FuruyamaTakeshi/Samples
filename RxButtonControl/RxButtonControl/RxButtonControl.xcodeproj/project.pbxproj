@@ -1,0 +1,744 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17AFC71A0B3852C52D2578F4 /* Pods_RxButtonControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA44519364B97AB0B29CD21 /* Pods_RxButtonControl.framework */; };
+		22EA61B51F497E8B00B4EE8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA61B41F497E8B00B4EE8E /* AppDelegate.swift */; };
+		22EA61B71F497E8B00B4EE8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA61B61F497E8B00B4EE8E /* ViewController.swift */; };
+		22EA61BA1F497E8B00B4EE8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EA61B81F497E8B00B4EE8E /* Main.storyboard */; };
+		22EA61BC1F497E8B00B4EE8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22EA61BB1F497E8B00B4EE8E /* Assets.xcassets */; };
+		22EA61BF1F497E8B00B4EE8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EA61BD1F497E8B00B4EE8E /* LaunchScreen.storyboard */; };
+		22EA61CA1F497E8B00B4EE8E /* RxButtonControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA61C91F497E8B00B4EE8E /* RxButtonControlTests.swift */; };
+		22EA61D51F497E8B00B4EE8E /* RxButtonControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA61D41F497E8B00B4EE8E /* RxButtonControlUITests.swift */; };
+		22EA61E31F49812D00B4EE8E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EA61E21F49812D00B4EE8E /* ViewModel.swift */; };
+		ACB0343435D2569FBDC57B9E /* Pods_RxButtonControlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35FB566251D6F3ACE5E7D9A /* Pods_RxButtonControlUITests.framework */; };
+		D9E1D818C9C8B11A16451A72 /* Pods_RxButtonControlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5F4D0DC434BF4A3C102CD /* Pods_RxButtonControlTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22EA61C61F497E8B00B4EE8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22EA61A91F497E8B00B4EE8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22EA61B01F497E8B00B4EE8E;
+			remoteInfo = RxButtonControl;
+		};
+		22EA61D11F497E8B00B4EE8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22EA61A91F497E8B00B4EE8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22EA61B01F497E8B00B4EE8E;
+			remoteInfo = RxButtonControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22EA61B11F497E8B00B4EE8E /* RxButtonControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxButtonControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22EA61B41F497E8B00B4EE8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22EA61B61F497E8B00B4EE8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22EA61B91F497E8B00B4EE8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22EA61BB1F497E8B00B4EE8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22EA61BE1F497E8B00B4EE8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22EA61C01F497E8B00B4EE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22EA61C51F497E8B00B4EE8E /* RxButtonControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxButtonControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22EA61C91F497E8B00B4EE8E /* RxButtonControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxButtonControlTests.swift; sourceTree = "<group>"; };
+		22EA61CB1F497E8B00B4EE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22EA61D01F497E8B00B4EE8E /* RxButtonControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxButtonControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22EA61D41F497E8B00B4EE8E /* RxButtonControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxButtonControlUITests.swift; sourceTree = "<group>"; };
+		22EA61D61F497E8B00B4EE8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22EA61E21F49812D00B4EE8E /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		2FA44519364B97AB0B29CD21 /* Pods_RxButtonControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxButtonControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEF1AB1D5E5BF6A64A9DA7F /* Pods-RxButtonControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxButtonControlTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxButtonControlTests/Pods-RxButtonControlTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4B5F4D0DC434BF4A3C102CD /* Pods_RxButtonControlTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxButtonControlTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E69CBB1D67C9C7C8451122 /* Pods-RxButtonControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxButtonControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxButtonControl/Pods-RxButtonControl.debug.xcconfig"; sourceTree = "<group>"; };
+		BD8441CF1B15BE5BDD619480 /* Pods-RxButtonControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxButtonControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxButtonControl/Pods-RxButtonControl.release.xcconfig"; sourceTree = "<group>"; };
+		C35FB566251D6F3ACE5E7D9A /* Pods_RxButtonControlUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxButtonControlUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42D8A704AB5201C4EED48BA /* Pods-RxButtonControlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxButtonControlUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxButtonControlUITests/Pods-RxButtonControlUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D2DE202B9017EF61C1F3C478 /* Pods-RxButtonControlUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxButtonControlUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxButtonControlUITests/Pods-RxButtonControlUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF8C9E546DF7BE970E99D7F9 /* Pods-RxButtonControlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxButtonControlTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxButtonControlTests/Pods-RxButtonControlTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22EA61AE1F497E8B00B4EE8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AFC71A0B3852C52D2578F4 /* Pods_RxButtonControl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22EA61C21F497E8B00B4EE8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E1D818C9C8B11A16451A72 /* Pods_RxButtonControlTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22EA61CD1F497E8B00B4EE8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB0343435D2569FBDC57B9E /* Pods_RxButtonControlUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0993F491B659C1E068E642B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FA44519364B97AB0B29CD21 /* Pods_RxButtonControl.framework */,
+				A4B5F4D0DC434BF4A3C102CD /* Pods_RxButtonControlTests.framework */,
+				C35FB566251D6F3ACE5E7D9A /* Pods_RxButtonControlUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F01BF1AC25D000470989B8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5E69CBB1D67C9C7C8451122 /* Pods-RxButtonControl.debug.xcconfig */,
+				BD8441CF1B15BE5BDD619480 /* Pods-RxButtonControl.release.xcconfig */,
+				8CEF1AB1D5E5BF6A64A9DA7F /* Pods-RxButtonControlTests.debug.xcconfig */,
+				EF8C9E546DF7BE970E99D7F9 /* Pods-RxButtonControlTests.release.xcconfig */,
+				D2DE202B9017EF61C1F3C478 /* Pods-RxButtonControlUITests.debug.xcconfig */,
+				C42D8A704AB5201C4EED48BA /* Pods-RxButtonControlUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		22EA61A81F497E8B00B4EE8E = {
+			isa = PBXGroup;
+			children = (
+				22EA61B31F497E8B00B4EE8E /* RxButtonControl */,
+				22EA61C81F497E8B00B4EE8E /* RxButtonControlTests */,
+				22EA61D31F497E8B00B4EE8E /* RxButtonControlUITests */,
+				22EA61B21F497E8B00B4EE8E /* Products */,
+				1F01BF1AC25D000470989B8F /* Pods */,
+				0993F491B659C1E068E642B5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22EA61B21F497E8B00B4EE8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22EA61B11F497E8B00B4EE8E /* RxButtonControl.app */,
+				22EA61C51F497E8B00B4EE8E /* RxButtonControlTests.xctest */,
+				22EA61D01F497E8B00B4EE8E /* RxButtonControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22EA61B31F497E8B00B4EE8E /* RxButtonControl */ = {
+			isa = PBXGroup;
+			children = (
+				22EA61B41F497E8B00B4EE8E /* AppDelegate.swift */,
+				22EA61B61F497E8B00B4EE8E /* ViewController.swift */,
+				22EA61E21F49812D00B4EE8E /* ViewModel.swift */,
+				22EA61B81F497E8B00B4EE8E /* Main.storyboard */,
+				22EA61BB1F497E8B00B4EE8E /* Assets.xcassets */,
+				22EA61BD1F497E8B00B4EE8E /* LaunchScreen.storyboard */,
+				22EA61C01F497E8B00B4EE8E /* Info.plist */,
+			);
+			path = RxButtonControl;
+			sourceTree = "<group>";
+		};
+		22EA61C81F497E8B00B4EE8E /* RxButtonControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				22EA61C91F497E8B00B4EE8E /* RxButtonControlTests.swift */,
+				22EA61CB1F497E8B00B4EE8E /* Info.plist */,
+			);
+			path = RxButtonControlTests;
+			sourceTree = "<group>";
+		};
+		22EA61D31F497E8B00B4EE8E /* RxButtonControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22EA61D41F497E8B00B4EE8E /* RxButtonControlUITests.swift */,
+				22EA61D61F497E8B00B4EE8E /* Info.plist */,
+			);
+			path = RxButtonControlUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22EA61B01F497E8B00B4EE8E /* RxButtonControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22EA61D91F497E8B00B4EE8E /* Build configuration list for PBXNativeTarget "RxButtonControl" */;
+			buildPhases = (
+				7586EB53FF7D81241A927483 /* [CP] Check Pods Manifest.lock */,
+				22EA61AD1F497E8B00B4EE8E /* Sources */,
+				22EA61AE1F497E8B00B4EE8E /* Frameworks */,
+				22EA61AF1F497E8B00B4EE8E /* Resources */,
+				20C94C3C62BBF2D3355B4C82 /* [CP] Embed Pods Frameworks */,
+				31BF75C9062E1BA253E879D3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxButtonControl;
+			productName = RxButtonControl;
+			productReference = 22EA61B11F497E8B00B4EE8E /* RxButtonControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22EA61C41F497E8B00B4EE8E /* RxButtonControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22EA61DC1F497E8B00B4EE8E /* Build configuration list for PBXNativeTarget "RxButtonControlTests" */;
+			buildPhases = (
+				191746112222D7DDFC6A3742 /* [CP] Check Pods Manifest.lock */,
+				22EA61C11F497E8B00B4EE8E /* Sources */,
+				22EA61C21F497E8B00B4EE8E /* Frameworks */,
+				22EA61C31F497E8B00B4EE8E /* Resources */,
+				7A6DBD572A3741E84A279735 /* [CP] Embed Pods Frameworks */,
+				B5F652BB2CB324B8DA774F7F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22EA61C71F497E8B00B4EE8E /* PBXTargetDependency */,
+			);
+			name = RxButtonControlTests;
+			productName = RxButtonControlTests;
+			productReference = 22EA61C51F497E8B00B4EE8E /* RxButtonControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22EA61CF1F497E8B00B4EE8E /* RxButtonControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22EA61DF1F497E8B00B4EE8E /* Build configuration list for PBXNativeTarget "RxButtonControlUITests" */;
+			buildPhases = (
+				1792FCBA32DE296EFC858A7F /* [CP] Check Pods Manifest.lock */,
+				22EA61CC1F497E8B00B4EE8E /* Sources */,
+				22EA61CD1F497E8B00B4EE8E /* Frameworks */,
+				22EA61CE1F497E8B00B4EE8E /* Resources */,
+				562485352FFA37A40B5479B6 /* [CP] Embed Pods Frameworks */,
+				A9BB6A8F3953C0E15E6A9408 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22EA61D21F497E8B00B4EE8E /* PBXTargetDependency */,
+			);
+			name = RxButtonControlUITests;
+			productName = RxButtonControlUITests;
+			productReference = 22EA61D01F497E8B00B4EE8E /* RxButtonControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22EA61A91F497E8B00B4EE8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "古山健司";
+				TargetAttributes = {
+					22EA61B01F497E8B00B4EE8E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					22EA61C41F497E8B00B4EE8E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 22EA61B01F497E8B00B4EE8E;
+					};
+					22EA61CF1F497E8B00B4EE8E = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 22EA61B01F497E8B00B4EE8E;
+					};
+				};
+			};
+			buildConfigurationList = 22EA61AC1F497E8B00B4EE8E /* Build configuration list for PBXProject "RxButtonControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22EA61A81F497E8B00B4EE8E;
+			productRefGroup = 22EA61B21F497E8B00B4EE8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22EA61B01F497E8B00B4EE8E /* RxButtonControl */,
+				22EA61C41F497E8B00B4EE8E /* RxButtonControlTests */,
+				22EA61CF1F497E8B00B4EE8E /* RxButtonControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22EA61AF1F497E8B00B4EE8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EA61BF1F497E8B00B4EE8E /* LaunchScreen.storyboard in Resources */,
+				22EA61BC1F497E8B00B4EE8E /* Assets.xcassets in Resources */,
+				22EA61BA1F497E8B00B4EE8E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22EA61C31F497E8B00B4EE8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22EA61CE1F497E8B00B4EE8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1792FCBA32DE296EFC858A7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxButtonControlUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		191746112222D7DDFC6A3742 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxButtonControlTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20C94C3C62BBF2D3355B4C82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxButtonControl/Pods-RxButtonControl-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxButtonControl/Pods-RxButtonControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31BF75C9062E1BA253E879D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxButtonControl/Pods-RxButtonControl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		562485352FFA37A40B5479B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxButtonControlUITests/Pods-RxButtonControlUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7586EB53FF7D81241A927483 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxButtonControl-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A6DBD572A3741E84A279735 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxButtonControlTests/Pods-RxButtonControlTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9BB6A8F3953C0E15E6A9408 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxButtonControlUITests/Pods-RxButtonControlUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5F652BB2CB324B8DA774F7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxButtonControlTests/Pods-RxButtonControlTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22EA61AD1F497E8B00B4EE8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EA61B71F497E8B00B4EE8E /* ViewController.swift in Sources */,
+				22EA61E31F49812D00B4EE8E /* ViewModel.swift in Sources */,
+				22EA61B51F497E8B00B4EE8E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22EA61C11F497E8B00B4EE8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EA61CA1F497E8B00B4EE8E /* RxButtonControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22EA61CC1F497E8B00B4EE8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EA61D51F497E8B00B4EE8E /* RxButtonControlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22EA61C71F497E8B00B4EE8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22EA61B01F497E8B00B4EE8E /* RxButtonControl */;
+			targetProxy = 22EA61C61F497E8B00B4EE8E /* PBXContainerItemProxy */;
+		};
+		22EA61D21F497E8B00B4EE8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22EA61B01F497E8B00B4EE8E /* RxButtonControl */;
+			targetProxy = 22EA61D11F497E8B00B4EE8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22EA61B81F497E8B00B4EE8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22EA61B91F497E8B00B4EE8E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22EA61BD1F497E8B00B4EE8E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22EA61BE1F497E8B00B4EE8E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22EA61D71F497E8B00B4EE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22EA61D81F497E8B00B4EE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22EA61DA1F497E8B00B4EE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E69CBB1D67C9C7C8451122 /* Pods-RxButtonControl.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RxButtonControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.furu.RxButtonControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		22EA61DB1F497E8B00B4EE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD8441CF1B15BE5BDD619480 /* Pods-RxButtonControl.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RxButtonControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.furu.RxButtonControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		22EA61DD1F497E8B00B4EE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CEF1AB1D5E5BF6A64A9DA7F /* Pods-RxButtonControlTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RxButtonControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.furu.RxButtonControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxButtonControl.app/RxButtonControl";
+			};
+			name = Debug;
+		};
+		22EA61DE1F497E8B00B4EE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF8C9E546DF7BE970E99D7F9 /* Pods-RxButtonControlTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RxButtonControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.furu.RxButtonControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxButtonControl.app/RxButtonControl";
+			};
+			name = Release;
+		};
+		22EA61E01F497E8B00B4EE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2DE202B9017EF61C1F3C478 /* Pods-RxButtonControlUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = RxButtonControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.furu.RxButtonControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = RxButtonControl;
+			};
+			name = Debug;
+		};
+		22EA61E11F497E8B00B4EE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C42D8A704AB5201C4EED48BA /* Pods-RxButtonControlUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = RxButtonControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.furu.RxButtonControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = RxButtonControl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22EA61AC1F497E8B00B4EE8E /* Build configuration list for PBXProject "RxButtonControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22EA61D71F497E8B00B4EE8E /* Debug */,
+				22EA61D81F497E8B00B4EE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22EA61D91F497E8B00B4EE8E /* Build configuration list for PBXNativeTarget "RxButtonControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22EA61DA1F497E8B00B4EE8E /* Debug */,
+				22EA61DB1F497E8B00B4EE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22EA61DC1F497E8B00B4EE8E /* Build configuration list for PBXNativeTarget "RxButtonControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22EA61DD1F497E8B00B4EE8E /* Debug */,
+				22EA61DE1F497E8B00B4EE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22EA61DF1F497E8B00B4EE8E /* Build configuration list for PBXNativeTarget "RxButtonControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22EA61E01F497E8B00B4EE8E /* Debug */,
+				22EA61E11F497E8B00B4EE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22EA61A91F497E8B00B4EE8E /* Project object */;
+}

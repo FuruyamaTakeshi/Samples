@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             }
         }
         
-        func factory() -> InputManualViewController {
+        func createInputViewController() -> InputManualViewController {
             switch self {
             case .weight:
                 return StoryboardScene.InputWeightViewController.initialViewController()
@@ -51,7 +51,8 @@ class ViewController: UIViewController {
             .subscribe(onNext: { [weak self] in
                 self?.dateLabel.text = "\(Date())"
                 if let atRow = self?.selectPickerView.selectedRow(inComponent: 0) {
-                    self?.pushViewController(viewController: dataSource[atRow].factory())
+                    let date = Date().startOfDay - 1.day
+                    self?.pushViewController(viewController: dataSource[atRow].createInputViewController(), at: date)
                 }
             })
             .disposed(by: disposeBag)
@@ -69,8 +70,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func pushViewController<T: UIViewController>(viewController: T) where T: ManuallyInputable {
-        viewController.selectedDate = Date().startOfDay
+    private func pushViewController<T: UIViewController>(viewController: T, at date: Date = Date().startOfDay) where T: ManuallyInputable {
+        viewController.selectedDate = date
         self.present(viewController, animated: true, completion: nil)
     }
     

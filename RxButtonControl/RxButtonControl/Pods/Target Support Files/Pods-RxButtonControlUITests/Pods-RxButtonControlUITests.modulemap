@@ -1,0 +1,6 @@
+framework module Pods_RxButtonControlUITests {
+  umbrella header "Pods-RxButtonControlUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
