@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimeSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6X-Ne-HMa">
+                                <rect key="frame" x="16" y="358" width="160" height="160"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="tbd-Sy-od5"/>
+                                    <constraint firstAttribute="width" secondItem="L6X-Ne-HMa" secondAttribute="height" multiplier="1:1" id="ya8-WA-FwG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsb-OP-edC">
+                                <rect key="frame" x="199" y="358" width="160" height="160"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="DY5-dc-Sxy"/>
+                                    <constraint firstAttribute="height" constant="160" id="eSc-10-kBi"/>
+                                    <constraint firstAttribute="width" secondItem="xsb-OP-edC" secondAttribute="height" multiplier="1:1" id="yg6-kB-ITK"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6F-uh-OsU">
+                                <rect key="frame" x="49" y="575" width="38" height="30"/>
+                                <state key="normal" title="move"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8s-vR-nvS">
+                                <rect key="frame" x="115" y="575" width="51" height="30"/>
+                                <state key="normal" title="reverse"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRE-f8-kR9">
+                                <rect key="frame" x="189" y="575" width="35" height="30"/>
+                                <state key="normal" title="reset"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xsb-OP-edC" secondAttribute="bottom" constant="149" id="2q2-Kw-Y9P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NRE-f8-kR9" secondAttribute="trailing" constant="151" id="9lI-tu-oDc"/>
+                            <constraint firstItem="g8s-vR-nvS" firstAttribute="leading" secondItem="q6F-uh-OsU" secondAttribute="trailing" constant="28" id="BC3-EV-7qr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L6X-Ne-HMa" secondAttribute="bottom" constant="149" id="IE7-Pc-L84"/>
+                            <constraint firstItem="q6F-uh-OsU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="MGK-8B-355"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xsb-OP-edC" secondAttribute="trailing" constant="16" id="U9Y-5x-svT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NRE-f8-kR9" secondAttribute="bottom" constant="62" id="bDM-c4-pc9"/>
+                            <constraint firstItem="L6X-Ne-HMa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="he9-bD-L3i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g8s-vR-nvS" secondAttribute="bottom" constant="62" id="hrJ-ON-5hh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q6F-uh-OsU" secondAttribute="bottom" constant="62" id="lRH-Hu-Vx4"/>
+                            <constraint firstItem="NRE-f8-kR9" firstAttribute="leading" secondItem="g8s-vR-nvS" secondAttribute="trailing" constant="23" id="zpW-h5-flW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueView" destination="xsb-OP-edC" id="nwE-0z-lPs"/>
+                        <outlet property="blueViewTrailConstraint" destination="U9Y-5x-svT" id="ayf-Dv-uAY"/>
+                        <outlet property="moveButton" destination="q6F-uh-OsU" id="xv6-SS-t6p"/>
+                        <outlet property="redView" destination="L6X-Ne-HMa" id="LrG-1E-Tpj"/>
+                        <outlet property="redViewLeadingConstraint" destination="he9-bD-L3i" id="6ge-0K-rOy"/>
+                        <outlet property="resetButton" destination="NRE-f8-kR9" id="qY3-UV-pyX"/>
+                        <outlet property="reverseButton" destination="g8s-vR-nvS" id="d5I-zK-q5W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
