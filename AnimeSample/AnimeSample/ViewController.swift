@@ -32,15 +32,31 @@ class ViewController: UIViewController {
         moveButton.rx.tap.asDriver()
             .drive(onNext: { [unowned self]() in
                 print("did tap")
-                self.animate(blueCenterX: blueCenterX, redCenterX: redCenterX)
                 print("const: \(String(describing: self.blueViewTrailConstraint.constant))")
+                
+                if self.blueView.center.x < self.redView.center.x {
+                    let newBlueCenterX: CGFloat
+                    let newRedCenterX: CGFloat
+                    newBlueCenterX = self.redView.center.x
+                    newRedCenterX = self.blueView.center.x
+                    self.animateWin(leftCenterX: newBlueCenterX, rightCenterX: newRedCenterX)
+                }
 
             })
             .disposed(by: disposeBag)
         
         reverseButton.rx.tap.asDriver()
             .drive(onNext: { [unowned self] () in
-                self.animate(blueCenterX: redCenterX, redCenterX: blueCenterX)
+                let newBlueCenterX: CGFloat
+                let newRedCenterX: CGFloat
+                if self.blueView.center.x > self.redView.center.x {
+                    newBlueCenterX = self.redView.center.x
+                    newRedCenterX = self.blueView.center.x
+                    self.animate(leftCenterX: newBlueCenterX, rightCenterX: newRedCenterX)
+                } else {
+                    newBlueCenterX = self.redView.center.x
+                    newRedCenterX = self.blueView.center.x
+                }
             })
             .disposed(by: disposeBag)
         
@@ -56,15 +72,42 @@ class ViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 
-    private func animate(blueCenterX: CGFloat, redCenterX: CGFloat) {
-        UIView.animateKeyframes(withDuration: 3, delay: 0, options: [], animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5, animations: {
-                self.blueView.center.x = redCenterX
-                self.blueViewTrailConstraint.constant = 16
-                self.redView.center.x = blueCenterX
+    private func animateWin(leftCenterX: CGFloat, rightCenterX: CGFloat) {
+        UIView.animateKeyframes(withDuration: 1, delay: 0, options: [], animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1, animations: {
+                self.blueView.center.x = leftCenterX / 2
+                self.redView.center.x = rightCenterX * 2
+                self.blueViewTrailConstraint.constant = 16 + leftCenterX / 2
+                self.view.layoutIfNeeded()
             })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
+                self.blueView.center.x = leftCenterX
+                self.redView.center.x = rightCenterX
+                self.blueViewTrailConstraint.constant = 16
+                self.view.layoutIfNeeded()
+            })
+            
         }, completion: nil)
     }
+    
+    private func animate(leftCenterX: CGFloat, rightCenterX: CGFloat) {
+        UIView.animateKeyframes(withDuration: 1, delay: 0, options: [], animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1, animations: {
+                self.blueView.center.x = leftCenterX * 2
+                self.redView.center.x = rightCenterX / 2
+                self.view.layoutIfNeeded()
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
+                self.blueView.center.x = leftCenterX
+                self.redView.center.x = rightCenterX
+                self.blueViewTrailConstraint.constant = 16 + rightCenterX - leftCenterX
 
+                self.view.layoutIfNeeded()
+            })
+            
+        }, completion: nil)
+    }
 }
 
