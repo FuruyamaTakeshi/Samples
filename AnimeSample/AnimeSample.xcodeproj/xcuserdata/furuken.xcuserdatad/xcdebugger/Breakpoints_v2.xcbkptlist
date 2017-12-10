@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeSample/ViewController.swift"
-            timestampString = "534595420.279568"
+            timestampString = "534599629.499903"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeSample/ViewController.swift"
-            timestampString = "534595420.280516"
+            timestampString = "534599629.500993"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -42,12 +42,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeSample/ViewController.swift"
-            timestampString = "534595420.28125"
+            timestampString = "534599629.501827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "animate(leftCenterX:rightCenterX:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "move(blueCenterX:redCenterX:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimeSample/ViewController.swift"
+            timestampString = "534599629.502792"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "move(blueCenterX:redCenterX:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimeSample/ViewController.swift"
+            timestampString = "534599629.503752"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "move(blueCenterX:redCenterX:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
