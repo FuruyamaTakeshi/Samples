@@ -21,12 +21,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var blueViewTrailConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var redViewLeadingConstraint: NSLayoutConstraint!
+    
+    var trailOrigin: CGFloat = 0
+    var leadOrigin: CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let blueCenterX = blueView.center.x
         let redCenterX = redView.center.x
+        trailOrigin = blueViewTrailConstraint.constant
+        leadOrigin = redViewLeadingConstraint.constant
+        
         print(blueViewTrailConstraint.constant)
         
         moveButton.rx.tap.asDriver()
@@ -74,17 +80,22 @@ class ViewController: UIViewController {
 
     private func animateWin(leftCenterX: CGFloat, rightCenterX: CGFloat) {
         UIView.animateKeyframes(withDuration: 1, delay: 0, options: [], animations: {
+            let length = self.view.frame.width - self.blueView.frame.maxX
+            let length1 = self.redView.frame.minX
+            
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1, animations: {
-                self.blueView.center.x = leftCenterX / 2
-                self.redView.center.x = rightCenterX * 2
-                self.blueViewTrailConstraint.constant = 16 + leftCenterX / 2
+                self.blueView.center.x = rightCenterX / 2
+                self.redView.center.x = leftCenterX / 2 +  rightCenterX / 2
+                self.blueViewTrailConstraint.constant = length / 2
+                self.redViewLeadingConstraint.constant = length1 / 2
                 self.view.layoutIfNeeded()
             })
             
             UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
-                self.blueView.center.x = leftCenterX
-                self.redView.center.x = rightCenterX
+                self.blueView.center.x = rightCenterX
+                self.redView.center.x = leftCenterX
                 self.blueViewTrailConstraint.constant = 16
+                self.redViewLeadingConstraint.constant = 16
                 self.view.layoutIfNeeded()
             })
             
@@ -93,17 +104,23 @@ class ViewController: UIViewController {
     
     private func animate(leftCenterX: CGFloat, rightCenterX: CGFloat) {
         UIView.animateKeyframes(withDuration: 1, delay: 0, options: [], animations: {
+            
+            let length = self.view.frame.width - self.redView.frame.maxX
+            let length1 = self.blueView.frame.minX
+            
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1, animations: {
-                self.blueView.center.x = leftCenterX * 2
+                self.blueView.center.x = leftCenterX / 2 +  rightCenterX / 2
                 self.redView.center.x = rightCenterX / 2
+                self.blueViewTrailConstraint.constant = length / 2
+                self.redViewLeadingConstraint.constant = length1 / 2
                 self.view.layoutIfNeeded()
             })
             
             UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
                 self.blueView.center.x = leftCenterX
                 self.redView.center.x = rightCenterX
-                self.blueViewTrailConstraint.constant = 16 + rightCenterX - leftCenterX
-
+                self.blueViewTrailConstraint.constant = length
+                self.redViewLeadingConstraint.constant = length1
                 self.view.layoutIfNeeded()
             })
             
