@@ -1,0 +1,32 @@
+{
+  "name": "SampleLib",
+  "version": "0.1.0",
+  "summary": "A short description of SampleLib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Furuyama.Takeshi0121@gmail.com/SampleLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Furuyama.Takeshi0121@gmail.com": "Furuyma.Takeshi0121@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Furuyama.Takeshi0121@gmail.com/SampleLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "swift_version": "4.2",
+  "source_files": "SampleLib/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "MapKit"
+  ],
+  "dependencies": {
+    "RxSwift": [
+
+    ]
+  }
+}

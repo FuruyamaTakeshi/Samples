@@ -1,0 +1,13 @@
+use_frameworks!
+
+target 'SampleLib_Example' do
+  pod 'SampleLib', :path => '../'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
+  target 'SampleLib_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
