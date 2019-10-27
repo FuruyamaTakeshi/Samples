@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }
 
     spec.static_framework         = true
-    spec.vendored_frameworks      = "KotlinNativeiOS/shardNative/build/cocoapods/framework/#{spec.name}.framework"
+    spec.vendored_frameworks      = "KotlinNativeiOS/sharedNative/build/cocoapods/framework/#{spec.name}.framework"
     spec.libraries                = "c++"
     spec.module_name              = "#{spec.name}_umbrella"
 
