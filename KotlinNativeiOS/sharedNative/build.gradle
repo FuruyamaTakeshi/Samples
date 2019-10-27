@@ -1,0 +1,23 @@
+apply plugin: 'kotlin-multiplatform'
+apply plugin: 'kotlin-native-cocoapods'
+
+buildscript {
+    ext.ios_framework_name = 'KotlinShared'
+}
+
+kotlin {
+    iosX64()
+    iosArm64()
+
+    version = "1.0.0"
+    cocoapods {
+        summary = "This is a sample summary"
+        homepage = "https://github.com/"
+    }
+
+    sourceSets {
+        commonMain.dependencies {
+            implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
+        }
+    }
+}

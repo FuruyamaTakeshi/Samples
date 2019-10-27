@@ -1,0 +1,16 @@
+PODS:
+  - sharedNative (1.0.0)
+
+DEPENDENCIES:
+  - sharedNative (from `../sharedNative`)
+
+EXTERNAL SOURCES:
+  sharedNative:
+    :path: "../sharedNative"
+
+SPEC CHECKSUMS:
+  sharedNative: 6eeb208f9751e2d56358c4b0b30858ce2d50e014
+
+PODFILE CHECKSUM: e5aa6324a7a85378aca3061885c245650d5c1f81
+
+COCOAPODS: 1.5.3
