@@ -2,14 +2,14 @@ Pod::Spec.new do |spec|
     spec.name                     = 'sharedNative'
     spec.version                  = '1.0.0'
     spec.homepage                 = 'https://github.com/'
-    spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
+    spec.source                   = { :git => "https://github.com/FuruyamaTakeshi/Samples.git", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'This is a sample summary'
     spec.license                  = { :type => 'MIT', :file => 'LICENSE' }
 
     spec.static_framework         = true
-    spec.vendored_frameworks      = "build/cocoapods/framework/#{spec.name}.framework"
+    spec.vendored_frameworks      = "KotlinNativeiOS/shardNative/build/cocoapods/framework/#{spec.name}.framework"
     spec.libraries                = "c++"
     spec.module_name              = "#{spec.name}_umbrella"
 
