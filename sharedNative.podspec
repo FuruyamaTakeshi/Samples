@@ -29,7 +29,7 @@ Pod::Spec.new do |spec|
             :script => <<-SCRIPT
                 set -ev
                 REPO_ROOT="$PODS_TARGET_SRCROOT"
-      		./gradlew --no-daemon -Pframework=#{spec.name}.framework linkReleaseFrameworkIos --stacktrace --info
+      		./gradlew --no-daemon -Pframework=#{spec.name}.framework --stacktrace --info
             SCRIPT
         }
     ]
