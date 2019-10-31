@@ -3,6 +3,7 @@ Pod::Spec.new do |spec|
     spec.version                  = '1.0.0'
     spec.homepage                 = 'https://github.com/'
     spec.source                   = { :git => "https://github.com/FuruyamaTakeshi/Samples.git", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
+    spec.source_files             = 'KotlinNativeiOS/*'
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'This is a sample summary'
@@ -13,7 +14,7 @@ Pod::Spec.new do |spec|
     spec.libraries                = "c++"
     spec.module_name              = "#{spec.name}_umbrella"
 
-            
+
 
     spec.pod_target_xcconfig = {
         'KOTLIN_TARGET[sdk=iphonesimulator*]' => 'ios_x64',
