@@ -1,6 +1,5 @@
 apply plugin: 'kotlin-multiplatform'
 apply plugin: 'kotlin-native-cocoapods'
-apply plugin: 'kotlinx-serialization'
 
 buildscript {
     ext.ios_framework_name = 'KotlinShared'
@@ -19,7 +18,6 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
-            implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
         }
     }
 }
