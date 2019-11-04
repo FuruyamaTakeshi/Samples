@@ -10,6 +10,17 @@ kotlin {
     iosX64()
     iosArm64()
 
+    targets {
+        fromPreset(presets.iosX64, 'ios') {
+            binaries {
+                framework("$ios_framework_name") {
+                    embedBitcode('disable')
+                }
+            }
+        }
+    }
+
+
     version = "1.0.0"
     cocoapods {
         summary = "This is a sample summary"

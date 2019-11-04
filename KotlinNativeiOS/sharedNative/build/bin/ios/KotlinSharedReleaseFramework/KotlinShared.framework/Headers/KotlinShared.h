@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedNativeUserEntity, SharedNativeAnnouncementEntity;
+@class KotlinSharedUserEntity, KotlinSharedAnnouncementEntity;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -24,12 +24,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 __attribute__((objc_runtime_name("KotlinMutableSet")))
 __attribute__((swift_name("KotlinMutableSet")))
-@interface SharedNativeMutableSet<ObjectType> : NSMutableSet<ObjectType>
+@interface KotlinSharedMutableSet<ObjectType> : NSMutableSet<ObjectType>
 @end;
 
 __attribute__((objc_runtime_name("KotlinMutableDictionary")))
 __attribute__((swift_name("KotlinMutableDictionary")))
-@interface SharedNativeMutableDictionary<KeyType, ObjectType> : NSMutableDictionary<KeyType, ObjectType>
+@interface KotlinSharedMutableDictionary<KeyType, ObjectType> : NSMutableDictionary<KeyType, ObjectType>
 @end;
 
 @interface NSError (NSErrorKotlinException)
@@ -38,7 +38,7 @@ __attribute__((swift_name("KotlinMutableDictionary")))
 
 __attribute__((objc_runtime_name("KotlinNumber")))
 __attribute__((swift_name("KotlinNumber")))
-@interface SharedNativeNumber : NSNumber
+@interface KotlinSharedNumber : NSNumber
 - (instancetype)initWithChar:(char)value __attribute__((unavailable));
 - (instancetype)initWithUnsignedChar:(unsigned char)value __attribute__((unavailable));
 - (instancetype)initWithShort:(short)value __attribute__((unavailable));
@@ -73,112 +73,112 @@ __attribute__((swift_name("KotlinNumber")))
 
 __attribute__((objc_runtime_name("KotlinByte")))
 __attribute__((swift_name("KotlinByte")))
-@interface SharedNativeByte : SharedNativeNumber
+@interface KotlinSharedByte : KotlinSharedNumber
 - (instancetype)initWithChar:(char)value;
 + (instancetype)numberWithChar:(char)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinUByte")))
 __attribute__((swift_name("KotlinUByte")))
-@interface SharedNativeUByte : SharedNativeNumber
+@interface KotlinSharedUByte : KotlinSharedNumber
 - (instancetype)initWithUnsignedChar:(unsigned char)value;
 + (instancetype)numberWithUnsignedChar:(unsigned char)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinShort")))
 __attribute__((swift_name("KotlinShort")))
-@interface SharedNativeShort : SharedNativeNumber
+@interface KotlinSharedShort : KotlinSharedNumber
 - (instancetype)initWithShort:(short)value;
 + (instancetype)numberWithShort:(short)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinUShort")))
 __attribute__((swift_name("KotlinUShort")))
-@interface SharedNativeUShort : SharedNativeNumber
+@interface KotlinSharedUShort : KotlinSharedNumber
 - (instancetype)initWithUnsignedShort:(unsigned short)value;
 + (instancetype)numberWithUnsignedShort:(unsigned short)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinInt")))
 __attribute__((swift_name("KotlinInt")))
-@interface SharedNativeInt : SharedNativeNumber
+@interface KotlinSharedInt : KotlinSharedNumber
 - (instancetype)initWithInt:(int)value;
 + (instancetype)numberWithInt:(int)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinUInt")))
 __attribute__((swift_name("KotlinUInt")))
-@interface SharedNativeUInt : SharedNativeNumber
+@interface KotlinSharedUInt : KotlinSharedNumber
 - (instancetype)initWithUnsignedInt:(unsigned int)value;
 + (instancetype)numberWithUnsignedInt:(unsigned int)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinLong")))
 __attribute__((swift_name("KotlinLong")))
-@interface SharedNativeLong : SharedNativeNumber
+@interface KotlinSharedLong : KotlinSharedNumber
 - (instancetype)initWithLongLong:(long long)value;
 + (instancetype)numberWithLongLong:(long long)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinULong")))
 __attribute__((swift_name("KotlinULong")))
-@interface SharedNativeULong : SharedNativeNumber
+@interface KotlinSharedULong : KotlinSharedNumber
 - (instancetype)initWithUnsignedLongLong:(unsigned long long)value;
 + (instancetype)numberWithUnsignedLongLong:(unsigned long long)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinFloat")))
 __attribute__((swift_name("KotlinFloat")))
-@interface SharedNativeFloat : SharedNativeNumber
+@interface KotlinSharedFloat : KotlinSharedNumber
 - (instancetype)initWithFloat:(float)value;
 + (instancetype)numberWithFloat:(float)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinDouble")))
 __attribute__((swift_name("KotlinDouble")))
-@interface SharedNativeDouble : SharedNativeNumber
+@interface KotlinSharedDouble : KotlinSharedNumber
 - (instancetype)initWithDouble:(double)value;
 + (instancetype)numberWithDouble:(double)value;
 @end;
 
 __attribute__((objc_runtime_name("KotlinBoolean")))
 __attribute__((swift_name("KotlinBoolean")))
-@interface SharedNativeBoolean : SharedNativeNumber
+@interface KotlinSharedBoolean : KotlinSharedNumber
 - (instancetype)initWithBool:(BOOL)value;
 + (instancetype)numberWithBool:(BOOL)value;
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserEntity")))
-@interface SharedNativeUserEntity : KotlinBase
+@interface KotlinSharedUserEntity : KotlinBase
 - (instancetype)initWithId:(NSString *)id name:(NSString *)name __attribute__((swift_name("init(id:name:)"))) __attribute__((objc_designated_initializer));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 - (NSString *)component1 __attribute__((swift_name("component1()")));
 - (NSString *)component2 __attribute__((swift_name("component2()")));
-- (SharedNativeUserEntity *)doCopyId:(NSString *)id name:(NSString *)name __attribute__((swift_name("doCopy(id:name:)")));
+- (KotlinSharedUserEntity *)doCopyId:(NSString *)id name:(NSString *)name __attribute__((swift_name("doCopy(id:name:)")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AnnouncementEntity")))
-@interface SharedNativeAnnouncementEntity : KotlinBase
+@interface KotlinSharedAnnouncementEntity : KotlinBase
 - (instancetype)initWithA:(int32_t)a b:(NSString *)b __attribute__((swift_name("init(a:b:)"))) __attribute__((objc_designated_initializer));
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 - (int32_t)component1 __attribute__((swift_name("component1()")));
 - (NSString *)component2 __attribute__((swift_name("component2()")));
-- (SharedNativeAnnouncementEntity *)doCopyA:(int32_t)a b:(NSString *)b __attribute__((swift_name("doCopy(a:b:)")));
+- (KotlinSharedAnnouncementEntity *)doCopyA:(int32_t)a b:(NSString *)b __attribute__((swift_name("doCopy(a:b:)")));
 @property (readonly) int32_t a __attribute__((swift_name("a")));
 @property (readonly) NSString *b __attribute__((swift_name("b")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CommonKt")))
-@interface SharedNativeCommonKt : KotlinBase
+@interface KotlinSharedCommonKt : KotlinBase
 + (void)helloWorld __attribute__((swift_name("helloWorld()")));
 @end;
 

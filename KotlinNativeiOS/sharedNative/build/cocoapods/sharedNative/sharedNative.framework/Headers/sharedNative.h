@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedNativeUserEntity;
+@class SharedNativeUserEntity, SharedNativeAnnouncementEntity;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -160,6 +160,20 @@ __attribute__((swift_name("UserEntity")))
 - (SharedNativeUserEntity *)doCopyId:(NSString *)id name:(NSString *)name __attribute__((swift_name("doCopy(id:name:)")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AnnouncementEntity")))
+@interface SharedNativeAnnouncementEntity : KotlinBase
+- (instancetype)initWithA:(int32_t)a b:(NSString *)b __attribute__((swift_name("init(a:b:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (int32_t)component1 __attribute__((swift_name("component1()")));
+- (NSString *)component2 __attribute__((swift_name("component2()")));
+- (SharedNativeAnnouncementEntity *)doCopyA:(int32_t)a b:(NSString *)b __attribute__((swift_name("doCopy(a:b:)")));
+@property (readonly) int32_t a __attribute__((swift_name("a")));
+@property (readonly) NSString *b __attribute__((swift_name("b")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
