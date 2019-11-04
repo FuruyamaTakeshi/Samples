@@ -6,3 +6,4 @@ fun helloWorld() {
 
 data class UserEntity(val id: String, val name: String)
 data class AnnouncementEntity(val id: String, val name: String)
+data class WeightEntity(val date: String, val value: Double)

@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedNativeUserEntity, SharedNativeAnnouncementEntity;
+@class SharedNativeUserEntity, SharedNativeAnnouncementEntity, SharedNativeWeightEntity;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -174,6 +174,20 @@ __attribute__((swift_name("AnnouncementEntity")))
 - (SharedNativeAnnouncementEntity *)doCopyId:(NSString *)id name:(NSString *)name __attribute__((swift_name("doCopy(id:name:)")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("WeightEntity")))
+@interface SharedNativeWeightEntity : KotlinBase
+- (instancetype)initWithDate:(NSString *)date value:(double)value __attribute__((swift_name("init(date:value:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (double)component2 __attribute__((swift_name("component2()")));
+- (SharedNativeWeightEntity *)doCopyDate:(NSString *)date value:(double)value __attribute__((swift_name("doCopy(date:value:)")));
+@property (readonly) NSString *date __attribute__((swift_name("date")));
+@property (readonly) double value __attribute__((swift_name("value")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
