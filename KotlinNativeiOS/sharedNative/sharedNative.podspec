@@ -6,7 +6,6 @@ Pod::Spec.new do |spec|
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'This is a sample summary'
-    spec.license                  = { :type => 'MIT', :file => 'LICENSE' }
 
     spec.static_framework         = true
     spec.vendored_frameworks      = "build/cocoapods/framework/#{spec.name}.framework"

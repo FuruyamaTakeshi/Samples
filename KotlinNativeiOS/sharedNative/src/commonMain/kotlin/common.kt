@@ -5,3 +5,4 @@ fun helloWorld() {
 }
 
 data class UserEntity(val id: String, val name: String)
+data class Announcement(val id: String, val name: String)
