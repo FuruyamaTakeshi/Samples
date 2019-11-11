@@ -1,3 +1,26 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:$mainKotlinVersion")
+            }
+            if (requested.id.id == "kotlinx-serialization") {
+                useModule("org.jetbrains.kotlin:kotlin-serialization:$mainKotlinVersion")
+            }
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+}
+
+rootProject.name='KotlinNativeiOS'
+
 include ':app', ':common'
 include ':sharedNative'
-rootProject.name='KotlinNativeiOS'
+enableFeaturePreview('GRADLE_METADATA')

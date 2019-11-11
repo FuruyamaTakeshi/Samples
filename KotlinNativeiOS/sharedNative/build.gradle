@@ -1,14 +1,39 @@
+buildscript {
+    ext.ios_framework_name = 'sharedNative'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+    }
+}
+
+plugins {
+    id 'kotlin-multiplatform'
+    id 'kotlinx-serialization'
+}
+
+repositories {
+    // artifacts are published to JCenter
+    jcenter()
+    mavenCentral()
+    maven { url "https://kotlin.bintray.com/kotlinx" }
+}
+
 apply plugin: 'kotlin-multiplatform'
 apply plugin: 'kotlin-native-cocoapods'
 
-buildscript {
-    ext.ios_framework_name = 'KotlinShared'
-}
 
 kotlin {
-    iosX64()
-    iosArm64()
-
+    targets {
+        fromPreset(presets.iosX64, 'iOS') {
+            binaries {
+                framework("$ios_framework_name") {
+                    embedBitcode('disable')
+                }
+            }
+        }
+    }
     version = "1.0.0"
     cocoapods {
         summary = "This is a sample summary"
@@ -18,6 +43,13 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
+            implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
+        }
+
+        iOSMain {
+            dependencies {
+                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
+            }
         }
     }
 }
