@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedNativeUserEntity, SharedNativeAnnouncement, SharedNativeKotlinArray, SharedNativeKotlinx_serialization_runtimeEnumDescriptor, SharedNativeKotlinx_serialization_runtimeSerialKind, SharedNativeKotlinNothing, SharedNativeKotlinx_serialization_runtimeUpdateMode, SharedNativeKotlinx_serialization_runtimeSerialClassDescImpl, SharedNativeKotlinEnum;
+@class SharedNativeUserEntity, SharedNativeAnnouncement, SharedNativeKtor_httpUrl, SharedNativeKtor_httpURLProtocol, SharedNativeKotlinArray, SharedNativeKotlinx_serialization_runtimeEnumDescriptor, SharedNativeKotlinx_serialization_runtimeSerialKind, SharedNativeKotlinNothing, SharedNativeKotlinx_serialization_runtimeUpdateMode, SharedNativeKotlinx_serialization_runtimeSerialClassDescImpl, SharedNativeKotlinEnum;
 
-@protocol SharedNativeKotlinx_serialization_runtimeKSerializer, SharedNativeKotlinx_serialization_runtimeEncoder, SharedNativeKotlinx_serialization_runtimeSerialDescriptor, SharedNativeKotlinx_serialization_runtimeSerializationStrategy, SharedNativeKotlinx_serialization_runtimeDecoder, SharedNativeKotlinx_serialization_runtimeDeserializationStrategy, SharedNativeKotlinx_serialization_runtimeCompositeEncoder, SharedNativeKotlinx_serialization_runtimeSerialModule, SharedNativeKotlinAnnotation, SharedNativeKotlinx_serialization_runtimeCompositeDecoder, SharedNativeKotlinIterator, SharedNativeKotlinx_serialization_runtimeGeneratedSerializer, SharedNativeKotlinx_serialization_runtimeSerialModuleCollector, SharedNativeKotlinKClass, SharedNativeKotlinComparable, SharedNativeKotlinKDeclarationContainer, SharedNativeKotlinKAnnotatedElement, SharedNativeKotlinKClassifier;
+@protocol SharedNativeKotlinx_serialization_runtimeKSerializer, SharedNativeKotlinx_serialization_runtimeEncoder, SharedNativeKotlinx_serialization_runtimeSerialDescriptor, SharedNativeKotlinx_serialization_runtimeSerializationStrategy, SharedNativeKotlinx_serialization_runtimeDecoder, SharedNativeKotlinx_serialization_runtimeDeserializationStrategy, SharedNativeKtor_httpParameters, SharedNativeKotlinx_serialization_runtimeCompositeEncoder, SharedNativeKotlinx_serialization_runtimeSerialModule, SharedNativeKotlinAnnotation, SharedNativeKotlinx_serialization_runtimeCompositeDecoder, SharedNativeKotlinMapEntry, SharedNativeKtor_utilsStringValues, SharedNativeKotlinIterator, SharedNativeKotlinx_serialization_runtimeGeneratedSerializer, SharedNativeKotlinx_serialization_runtimeSerialModuleCollector, SharedNativeKotlinKClass, SharedNativeKotlinComparable, SharedNativeKotlinKDeclarationContainer, SharedNativeKotlinKAnnotatedElement, SharedNativeKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -199,6 +199,15 @@ __attribute__((swift_name("Announcement.Companion")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("ApplicationApi")))
+@interface SharedNativeApplicationApi : KotlinBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (void)aboutCallback:(void (^)(NSString *))callback __attribute__((swift_name("about(callback:)")));
+@property SharedNativeKtor_httpUrl *address __attribute__((swift_name("address")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CommonKt")))
 @interface SharedNativeCommonKt : KotlinBase
 + (void)helloWorld __attribute__((swift_name("helloWorld()")));
@@ -223,6 +232,35 @@ __attribute__((swift_name("Kotlinx_serialization_runtimeDeserializationStrategy"
 __attribute__((swift_name("Kotlinx_serialization_runtimeKSerializer")))
 @protocol SharedNativeKotlinx_serialization_runtimeKSerializer <SharedNativeKotlinx_serialization_runtimeSerializationStrategy, SharedNativeKotlinx_serialization_runtimeDeserializationStrategy>
 @required
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Ktor_httpUrl")))
+@interface SharedNativeKtor_httpUrl : KotlinBase
+- (instancetype)initWithProtocol:(SharedNativeKtor_httpURLProtocol *)protocol host:(NSString *)host specifiedPort:(int32_t)specifiedPort encodedPath:(NSString *)encodedPath parameters:(id<SharedNativeKtor_httpParameters>)parameters fragment:(NSString *)fragment user:(NSString * _Nullable)user password:(NSString * _Nullable)password trailingQuery:(BOOL)trailingQuery __attribute__((swift_name("init(protocol:host:specifiedPort:encodedPath:parameters:fragment:user:password:trailingQuery:)"))) __attribute__((objc_designated_initializer));
+- (SharedNativeKtor_httpURLProtocol *)component1 __attribute__((swift_name("component1()")));
+- (NSString *)component2 __attribute__((swift_name("component2()")));
+- (int32_t)component3 __attribute__((swift_name("component3()")));
+- (NSString *)component4 __attribute__((swift_name("component4()")));
+- (id<SharedNativeKtor_httpParameters>)component5 __attribute__((swift_name("component5()")));
+- (NSString *)component6 __attribute__((swift_name("component6()")));
+- (NSString * _Nullable)component7 __attribute__((swift_name("component7()")));
+- (NSString * _Nullable)component8 __attribute__((swift_name("component8()")));
+- (BOOL)component9 __attribute__((swift_name("component9()")));
+- (SharedNativeKtor_httpUrl *)doCopyProtocol:(SharedNativeKtor_httpURLProtocol *)protocol host:(NSString *)host specifiedPort:(int32_t)specifiedPort encodedPath:(NSString *)encodedPath parameters:(id<SharedNativeKtor_httpParameters>)parameters fragment:(NSString *)fragment user:(NSString * _Nullable)user password:(NSString * _Nullable)password trailingQuery:(BOOL)trailingQuery __attribute__((swift_name("doCopy(protocol:host:specifiedPort:encodedPath:parameters:fragment:user:password:trailingQuery:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *encodedPath __attribute__((swift_name("encodedPath")));
+@property (readonly) NSString *fragment __attribute__((swift_name("fragment")));
+@property (readonly) NSString *host __attribute__((swift_name("host")));
+@property (readonly) id<SharedNativeKtor_httpParameters> parameters __attribute__((swift_name("parameters")));
+@property (readonly) NSString * _Nullable password __attribute__((swift_name("password")));
+@property (readonly) int32_t port __attribute__((swift_name("port")));
+@property (readonly) SharedNativeKtor_httpURLProtocol *protocol __attribute__((swift_name("protocol")));
+@property (readonly) int32_t specifiedPort __attribute__((swift_name("specifiedPort")));
+@property (readonly) BOOL trailingQuery __attribute__((swift_name("trailingQuery")));
+@property (readonly) NSString * _Nullable user __attribute__((swift_name("user")));
 @end;
 
 __attribute__((swift_name("Kotlinx_serialization_runtimeEncoder")))
@@ -286,6 +324,39 @@ __attribute__((swift_name("Kotlinx_serialization_runtimeDecoder")))
 - (id _Nullable)updateSerializableValueDeserializer:(id<SharedNativeKotlinx_serialization_runtimeDeserializationStrategy>)deserializer old:(id _Nullable)old __attribute__((swift_name("updateSerializableValue(deserializer:old:)")));
 @property (readonly) id<SharedNativeKotlinx_serialization_runtimeSerialModule> context __attribute__((swift_name("context")));
 @property (readonly) SharedNativeKotlinx_serialization_runtimeUpdateMode *updateMode __attribute__((swift_name("updateMode")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Ktor_httpURLProtocol")))
+@interface SharedNativeKtor_httpURLProtocol : KotlinBase
+- (instancetype)initWithName:(NSString *)name defaultPort:(int32_t)defaultPort __attribute__((swift_name("init(name:defaultPort:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (int32_t)component2 __attribute__((swift_name("component2()")));
+- (SharedNativeKtor_httpURLProtocol *)doCopyName:(NSString *)name defaultPort:(int32_t)defaultPort __attribute__((swift_name("doCopy(name:defaultPort:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t defaultPort __attribute__((swift_name("defaultPort")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@end;
+
+__attribute__((swift_name("Ktor_utilsStringValues")))
+@protocol SharedNativeKtor_utilsStringValues
+@required
+- (BOOL)containsName:(NSString *)name __attribute__((swift_name("contains(name:)")));
+- (BOOL)containsName:(NSString *)name value:(NSString *)value __attribute__((swift_name("contains(name:value:)")));
+- (NSSet<id<SharedNativeKotlinMapEntry>> *)entries __attribute__((swift_name("entries()")));
+- (void)forEachBody:(void (^)(NSString *, NSArray<NSString *> *))body __attribute__((swift_name("forEach(body:)")));
+- (NSString * _Nullable)getName:(NSString *)name __attribute__((swift_name("get(name:)")));
+- (NSArray<NSString *> * _Nullable)getAllName:(NSString *)name __attribute__((swift_name("getAll(name:)")));
+- (BOOL)isEmpty __attribute__((swift_name("isEmpty()")));
+- (NSSet<NSString *> *)names __attribute__((swift_name("names()")));
+@property (readonly) BOOL caseInsensitiveName __attribute__((swift_name("caseInsensitiveName")));
+@end;
+
+__attribute__((swift_name("Ktor_httpParameters")))
+@protocol SharedNativeKtor_httpParameters <SharedNativeKtor_utilsStringValues>
+@required
 @end;
 
 __attribute__((swift_name("Kotlinx_serialization_runtimeCompositeEncoder")))
@@ -429,6 +500,13 @@ __attribute__((swift_name("Kotlinx_serialization_runtimeUpdateMode")))
 @property (class, readonly) SharedNativeKotlinx_serialization_runtimeUpdateMode *update __attribute__((swift_name("update")));
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 - (int32_t)compareToOther:(SharedNativeKotlinx_serialization_runtimeUpdateMode *)other __attribute__((swift_name("compareTo(other:)")));
+@end;
+
+__attribute__((swift_name("KotlinMapEntry")))
+@protocol SharedNativeKotlinMapEntry
+@required
+@property (readonly) id _Nullable key __attribute__((swift_name("key")));
+@property (readonly) id _Nullable value __attribute__((swift_name("value")));
 @end;
 
 __attribute__((swift_name("KotlinIterator")))
