@@ -18,6 +18,7 @@ repositories {
     jcenter()
     mavenCentral()
     maven { url "https://kotlin.bintray.com/kotlinx" }
+    maven { url "https://dl.bintray.com/kotlin/ktor" }
 }
 
 apply plugin: 'kotlin-multiplatform'
@@ -44,11 +45,13 @@ kotlin {
         commonMain.dependencies {
             implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
             implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
+            implementation "io.ktor:ktor-client-core:$ktor_version"
         }
 
         iOSMain {
             dependencies {
                 implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
+                implementation "io.ktor:ktor-client-ios:$ktor_version"
             }
         }
     }
